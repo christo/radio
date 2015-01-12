@@ -12,6 +12,7 @@ My initial sources are probably somafm.com playlists since that's what I'm liste
 TODO
 ----
 * rip streams using stream ripper
-* get playlists from multiple sources e.g. using scripts like somafm.py
+* get playlists from multiple sources e.g. using scripts like  https://github.com/bjornedstrom/somafmtools/
+* check out https://github.com/AlexandrePTJ/mopidy-somafm/
 * bash-completion on keywords/names
 
