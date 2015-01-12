@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# equivalent of linux vlc distro command-line vlc 
+/Applications/VLC.app/Contents/MacOS/VLC -I rc $1
