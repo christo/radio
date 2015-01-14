@@ -1,0 +1,23 @@
+#!/bin/bash 
+
+# cvlc for mac is in this dir. Linux vlc distros have it already
+dir=`dirname $0`
+PATH=$PATH:$dir
+
+if [[ -z "$1" ]]; then
+    cat  <<ENDO
+    command line streaming radio - all somafm stations for now:
+    usage: $FUNCNAME <showname>
+    e.g.: 
+
+    radio groovesalad
+    radio dronezone
+    radio dubstep
+    radio deepspaceone
+    radio missioncontrol
+    radio lush
+ENDO
+
+else
+    clvc "http://somafm.com/$1.pls";
+fi
