@@ -1,0 +1,22 @@
+#!/usr/bin/perl -w
+
+use strict;
+
+# perl script for running streamripper as if it was vlc
+# you can get streamripper from http://streamripper.sourceforge.net/
+# also runs a proxy server (by default on next available port from 8000+)
+# 
+# ENVIRONMENT VARIABLES
+#
+# RIP_RADIO_HOME   the directory base path to rip mp3s to, defaults to pwd
+
+if (scalar @ARGV < 1) {
+    die "usage: $0 <streamname> \n where <streamname> is dronezone, dubstep, groovesalad etc.";
+} else {
+    my $dir = $ENV{"RIP_RADIO_HOME"} || ".";
+    open(F, qq{streamripper "http://ice.somafm.com/$ARGV[0]" -d "$dir" -u 'VLC/2.1.5 LibVLC/2.1.5' -q -r|});
+    while (<F>) {
+        print;
+    }
+    close(F);
+}
