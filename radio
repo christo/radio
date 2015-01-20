@@ -2,7 +2,6 @@
 
 # cvlc for mac is in this dir. Linux vlc distros have it already
 dir=`dirname $0`
-PATH=$PATH:$dir
 
 if [[ -z "$1" ]]; then
     cat  <<ENDO
@@ -19,5 +18,5 @@ if [[ -z "$1" ]]; then
 ENDO
 
 else
-    clvc "http://somafm.com/$1.pls";
+    $dir/cvlc "http://somafm.com/$1.pls";
 fi
