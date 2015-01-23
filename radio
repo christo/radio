@@ -3,6 +3,7 @@
 # cvlc for mac is in this dir. Linux vlc distros have it already
 dir=`dirname $0`
 
+$dir/somafm.py >$dir/somafm.pls &
 if [[ -z "$1" ]]; then
     cat  <<ENDO
     command line streaming radio - all somafm stations for now:
