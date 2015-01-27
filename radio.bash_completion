@@ -1,0 +1,13 @@
+
+_radio() {
+    local cur prev opts
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    if [[ -f "$RADIO_HOME/somafm.pls" ]]; then
+        opts=`perl -ne 'm{http://somafm\.com/(.*)\.pls} && print"$1 ";' "$RADIO_HOME/somafm.pls"`
+        COMPREPLY=( $(compgen -W "${opts}" -- ${cur}) )
+        return 0
+    fi
+}
+complete -F _radio radio
