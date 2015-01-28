@@ -1,4 +1,9 @@
 
+# set the environment variable RADIO HOME to this project directory
+# source this file by adding the following to your .bash_profile
+# source $RADIO_HOME/radio.bash_completion
+
+
 _radio() {
     local cur prev opts
     COMPREPLY=()
